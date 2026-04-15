@@ -56,21 +56,7 @@ Built with Streamlit:
 ---
 
 ## 🏗️ Architecture
-Raw RSS Feeds
-    ↓
-Preprocessing (cleaning, normalization)
-    ↓
-Semantic Filtering (Sentence Transformers)
-    ↓
-LLM Filtering (Gemini)
-    ↓
-Content Extraction (newspaper3k)
-    ↓
-LLM Summarization (Agent)
-    ↓
-Insight Generation (Agent)
-    ↓
-Streamlit UI
+Raw RSS Feeds -> Preprocessing (cleaning, normalization) -> Semantic Filtering (Sentence Transformers) -> LLM Filtering (Gemini) -> Content Extraction (newspaper3k) -> LLM Summarization (Agent) -> Insight Generation (Agent) -> Streamlit UI
 
 ---
 
@@ -103,25 +89,27 @@ Streamlit UI
 ## ⚙️ Installation
 
 ```bash
-git clone <repo_url>
+git clone <url>
 cd project
 pip install -r requirements.txt
+```
+---
 
-🧠 Key Design Decisions
-LLM for reasoning, not data retrieval
-Metadata (author, link) handled outside LLM
-Two-stage pipeline
-Article-level summarization
-Cross-article synthesis
-Structured JSON outputs
-Enables consistent UI rendering
+### 🧠 Key Design Decisions
+- LLM for reasoning, not data retrieval
+- Metadata (author, link) handled outside LLM
+- Two-stage pipeline
+- Article-level summarization
+- Cross-article synthesis
+- Structured JSON outputs
+- Enables consistent UI rendering
 
-🚧 Future Improvements
-Async/batched LLM calls (performance)
-Deduplication of similar articles
-Persistent storage (database)
-User personalization
-Trend tracking over time
+### 🚧 Future Improvements
+- Async/batched LLM calls (performance)
+- Deduplication of similar articles
+- Persistent storage (database)
+- User personalization
+- Trend tracking over time
 
-📌 Takeaway
+### 📌 Takeaway
 This project demonstrates how LLMs can be used to build end-to-end intelligence systems, not just chat interfaces.
